@@ -13,13 +13,13 @@ public class JDBCRowSetDemoWithForwardBackwardAndAbsoluteScroll {
         rs.setPassword("itservices@123");
         rs.setCommand("select * from employee");
         rs.execute();
-        System.out.println("Records in forward direction");
+        System.out.println("Records in forward direction mentioned");
         System.out.println("Id\tNAME\t\t\tAddress");
         System.out.println("---------------------");
         while (rs.next()) {
             System.out.println(rs.getInt(1) + "\t" + rs.getString(2) + "\t" + rs.getString(2));
         }
-        System.out.println("Records in backward direction");
+        System.out.println("Records in backward direction in JDBC ROW set");
         System.out.println("Id\tName\t\t\tAddress");
         while (rs.previous()) {
             System.out.println(rs.getInt(1) + "\t" + rs.getString(2) + "\t" + rs.getString(3));
